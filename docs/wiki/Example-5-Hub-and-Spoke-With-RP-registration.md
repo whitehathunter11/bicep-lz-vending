@@ -3,7 +3,7 @@
 
 ### Bicep Module Registry
 
-Here is a simple example Bicep file for deploying a landing zone (Subscription) with a spoke Virtual Network peered to a Hub Virtual Network, resource providers and features registration using the [Bicep Module Registry](https://github.com/Azure/bicep-registry-modules):
+Here is a simple example Bicep file for deploying a landing zone (Subscription) with a spoke Virtual Network peered to a Hub Virtual Network, resource providers and features registration using the [Bicep Module Registry](https://aka.ms/lz-vending/bicep):
 
 > A resoure group gets created in the subscription with the format "rsg-<location>-ds-<xxxx>" hosting a deployment script and a user-assigned managed identity. This resource group needs to be manually deleted if not needed after the resource providers features registration process.
 >
@@ -19,7 +19,7 @@ targetScope = 'managementGroup'
 @description('Specifies the location for resources.')
 param location string = 'uksouth'
 
-module sub003 'br/public:lz/sub-vending:1.5.1' = {
+module sub003 'br/public:avm/ptn/lz/sub-vending:0.1.0' = {
   name: 'sub-bicep-lz-vending-example-001'
   params: {
     subscriptionAliasEnabled: true
@@ -178,8 +178,8 @@ Here is a simple example parameter file for deploying a landing zone (Subscripti
         "Microsoft.AVS" : ["AzureServicesVm","ArcAutomatedOnboarding"]
       }
     },
-    "disableTelemetry": {
-      "value": false
+    "enableTelemetry": {
+      "value": true
     }
   }
 }

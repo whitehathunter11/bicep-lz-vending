@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD041 -->
 Here are some example configurations that demonstrate the module usage.
 
-> If there is an example missing from here that you would like to see then please [raise an issue](https://github.com/Azure/bicep-lz-vending/issues/new/choose) on the repo 👍
+> If there is an example missing from here that you would like to see then please [raise an issue](ttps://github.com/Azure/bicep-registry-modules/issues) on the repo 👍
 
 | Example                                                                                           | Description                                                                                                              |
 | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
